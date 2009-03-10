@@ -1,0 +1,8 @@
+doc/LICENSE
+Internet2-repo.spec
+Makefile
+etc/mirrors-Internet2
+etc/RPM-GPG-KEY-Internet2
+etc/Internet2.repo
+etc/Internet2.list
+MANIFEST
