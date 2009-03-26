@@ -3,7 +3,7 @@
 Summary:    Internet2 Repository file and package configuration
 Name:       Internet2-repo
 Version:    0.1
-Release:    1
+Release:    2
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
 URL:        http://software.internet2.edu
@@ -52,6 +52,9 @@ rpm -q gpg-pubkey-9d7b9686-4947b567 &>/dev/null || rpm --import $RPM_BUILD_ROOT/
 %endif
 
 %changelog
+* Thu Mar 26 2009 Jason Zurawski <zurawski@internet2.edu> - 0.0.1-2
+- Update repo URLs.
+
 * Thu Feb 12 2009 Jason Zurawski <zurawski@internet2.edu> - 0.0.1-1
 - Initial package.
 

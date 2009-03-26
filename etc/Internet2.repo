@@ -2,8 +2,8 @@
 # URL: http://software.internet2.edu
 [Internet2]
 name = Internet2 RPM Repository - software.internet2.edu - main
-#baseurl = http://dc211.internet2.edu/rpms/$basearch/main
-mirrorlist = http://dc211.internet2.edu/rpms/mirrors-Internet2
+#baseurl = http://software.internet2.edu/rpms/$basearch/main
+mirrorlist = http://software.internet2.edu/rpms/mirrors-Internet2
 #mirrorlist = file:///etc/yum.repos.d/mirrors-Internet2
 enabled = 1
 protect = 0
