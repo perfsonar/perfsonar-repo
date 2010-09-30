@@ -25,6 +25,7 @@ Internt2 software release file. This package contains yum configuration for the 
 %{__rm} -rf $RPM_BUILD_ROOT
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc/Internet2.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc/Internet2-web100_kernel.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 %{__cp} etc/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 
@@ -37,7 +38,7 @@ Internt2 software release file. This package contains yum configuration for the 
 %pubkey etc/RPM-GPG-KEY-Internet2
 %endif
 %dir /etc/yum.repos.d/
-%config(noreplace) /etc/yum.repos.d/Internet2.repo
+%config(noreplace) /etc/yum.repos.d
 %dir /etc/pki/rpm-gpg/
 /etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
 
