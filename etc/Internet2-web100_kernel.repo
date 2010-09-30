@@ -1,0 +1,9 @@
+# Name: Internet2 RPM Repository
+# URL: http://software.internet2.edu
+[Internet2-web100_kernel]
+name = Internet2 Web100 Kernel RPM Repository - software.internet2.edu - main
+mirrorlist = http://software.internet2.edu/web100_kernel/rpms/mirrors-Internet2-web100_kernel
+enabled = 0
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
+gpgcheck = 1

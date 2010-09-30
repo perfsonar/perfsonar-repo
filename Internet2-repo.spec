@@ -2,17 +2,19 @@
 
 Summary:    Internet2 Repository file and package configuration
 Name:       Internet2-repo
-Version:    0.1
-Release:    2
+Version:    0.2
+Release:    1
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
 URL:        http://software.internet2.edu
 Source0:    Internet2-repo.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  noarch
+Requires:   yum
+Requires:   rpm
 
 %description
-Internt2 software release file. This package contains apt and yum configuration for the Internet2 RPM Repository, as well as the public GPG keys used to sign them.
+Internt2 software release file. This package contains yum configuration for the Internet2 RPM Repository, as well as the public GPG keys used to sign them.
 
 %prep
 %setup -q -n Internet2-repo
@@ -21,11 +23,8 @@ Internt2 software release file. This package contains apt and yum configuration 
 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
-%{__mkdir} -p $RPM_BUILD_ROOT/etc/apt/sources.list.d
-%{__cp} etc/Internet2.list $RPM_BUILD_ROOT/etc/apt/sources.list.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc/Internet2.repo $RPM_BUILD_ROOT/etc/yum.repos.d
-%{__cp} etc/mirrors-Internet2 $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 %{__cp} etc/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 
@@ -37,12 +36,8 @@ Internt2 software release file. This package contains apt and yum configuration 
 %if %{!?_without_rpmpubkey:1}0
 %pubkey etc/RPM-GPG-KEY-Internet2
 %endif
-%dir /etc/apt/
-%dir /etc/apt/sources.list.d/
-%config(noreplace) /etc/apt/sources.list.d/Internet2.list
 %dir /etc/yum.repos.d/
 %config(noreplace) /etc/yum.repos.d/Internet2.repo
-%config /etc/yum.repos.d/mirrors-Internet2
 %dir /etc/pki/rpm-gpg/
 /etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
 
@@ -52,6 +47,11 @@ rpm -q gpg-pubkey-9d7b9686-4947b567 &>/dev/null || rpm --import $RPM_BUILD_ROOT/
 %endif
 
 %changelog
+* Thu Sep 30 2010 Aaron Brown <aaron@internet2.edu> - 0.0.1-3
+- Remove apt-rpm support
+- Add requirement on yum/rpm
+- Add support for web100 kernel repository
+
 * Thu Mar 26 2009 Jason Zurawski <zurawski@internet2.edu> - 0.0.1-2
 - Update repo URLs.
 
