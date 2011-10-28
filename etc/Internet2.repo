@@ -2,7 +2,7 @@
 # URL: http://software.internet2.edu
 [Internet2]
 name = Internet2 RPM Repository - software.internet2.edu - main
-baseurl = http://software.internet2.edu/branches/release-3.2.1-rc3/rpms/i386/main/
+baseurl = http://software.internet2.edu/rpms/i386/main/
 enabled = 1
 protect = 0
 gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
