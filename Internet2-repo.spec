@@ -12,6 +12,7 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  noarch
 Requires:   yum
 Requires:   rpm
+Obsoletes:  Internet2-epel6-repo <= 0.1-1
 
 %description
 Internt2 software release file. This package contains yum configuration for the Internet2 RPM Repository, as well as the public GPG keys used to sign them.
@@ -24,10 +25,10 @@ Internt2 software release file. This package contains yum configuration for the 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/yum.repos.d
-%{__cp} etc-%{dist}/Internet2.repo $RPM_BUILD_ROOT/etc/yum.repos.d
-%{__cp} etc-%{dist}/Internet2-web100_kernel.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc%{dist}/Internet2.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc%{dist}/Internet2-web100_kernel.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
-%{__cp} etc-%{dist}/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
+%{__cp} etc%{dist}/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -35,7 +36,7 @@ Internt2 software release file. This package contains yum configuration for the 
 %files
 %defattr(-, root, root, 0755)
 %if %{!?_without_rpmpubkey:1}0
-%pubkey etc/RPM-GPG-KEY-Internet2
+%pubkey etc%{dist}/RPM-GPG-KEY-Internet2
 %endif
 %dir /etc/yum.repos.d/
 %config(noreplace) /etc/yum.repos.d
