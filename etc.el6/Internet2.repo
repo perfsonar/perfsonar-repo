@@ -2,7 +2,7 @@
 # URL: http://software.internet2.edu
 [Internet2]
 name = Internet2 RPM Repository - software.internet2.edu - main
-baseurl = http://software.internet2.edu/rpms/el6/$basearch/main/
+mirrorlist = http://software.internet2.edu/rpms/el6/mirrors-Toolkit-Internet2
 enabled = 1
 protect = 0
 gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
