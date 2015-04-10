@@ -3,7 +3,7 @@
 Summary:    Internet2 Repository file and package configuration
 Name:       Internet2-repo
 Version:    0.5
-Release:    7
+Release:    8
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
 URL:        http://software.internet2.edu
@@ -27,6 +27,7 @@ Internt2 software release file. This package contains yum configuration for the 
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/Internet2.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/Internet2-web100_kernel.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc%{dist}/Internet2-Vault.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 %{__cp} etc%{dist}/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 

@@ -8,5 +8,5 @@ etc.el5/Internet2-Vault.repo
 etc.el6/RPM-GPG-KEY-Internet2
 etc.el6/Internet2.repo
 etc.el6/Internet2-web100_kernel.repo
-etc.el5/Internet2-Vault.repo
+etc.el6/Internet2-Vault.repo
 MANIFEST
