@@ -1,0 +1,9 @@
+# Name: Internet2 Staging RPM Repository
+# URL: http://software.internet2.edu
+[Internet2-staging]
+name = Internet2 Staging RPM Repository
+baseurl = http://software.internet2.edu/branches/staging/rpms/el6/$basearch/main/
+enabled = 1
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
+gpgcheck = 1
