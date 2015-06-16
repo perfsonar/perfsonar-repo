@@ -18,14 +18,20 @@ Obsoletes:  Internet2-epel6-repo <= 0.1-1
 Internt2 software release file. This package contains yum configuration for the Internet2 RPM Repository, as well as the public GPG keys used to sign them.
 
 %package nightly
-Summary:    Configures yum to use Internet2 nightly repository
+Summary:    Internet2 nightly repository
 Group:      System Environment/Base
 Requires:   Internet2-repo
 
+%description nightly
+Configures yum to use Internet2 nightly repository
+
 %package staging
-Summary:    Configures yum to use Internet2 staging repository
+Summary:    Internet2 staging repository
 Group:      System Environment/Base
 Requires:   Internet2-repo
+
+%description staging
+Configures yum to use Internet2 staging repository
 
 %prep
 %setup -q -n Internet2-repo
@@ -53,7 +59,7 @@ Requires:   Internet2-repo
 %endif
 %config(noreplace) /etc/yum.repos.d/Internet2.repo
 %config(noreplace) /etc/yum.repos.d/Internet2-web100_kernel.repo
-%config(noreplace) /etc/yum.repos.d/Internet2-Vault.repo.repo
+%config(noreplace) /etc/yum.repos.d/Internet2-Vault.repo
 %dir /etc/pki/rpm-gpg/
 /etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
 
