@@ -2,8 +2,8 @@
 
 Summary:    Internet2 Repository file and package configuration
 Name:       Internet2-repo
-Version:    0.5
-Release:    9 
+Version:    0.6
+Release:    1 
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
 URL:        http://software.internet2.edu
@@ -48,6 +48,7 @@ Configures yum to use Internet2 staging repository
 %{__cp} etc%{dist}/Internet2-staging.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 %{__cp} etc%{dist}/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
+%{__cp} etc%{dist}/RPM-GPG-KEY-Internet2-testing $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -62,6 +63,7 @@ Configures yum to use Internet2 staging repository
 %config(noreplace) /etc/yum.repos.d/Internet2-Vault.repo
 %dir /etc/pki/rpm-gpg/
 /etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
+/etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2-testing
 
 %files nightly
 %defattr(-, root, root, 0755)
@@ -74,6 +76,7 @@ Configures yum to use Internet2 staging repository
 %post
 %if %{!?_without_rpmpubkey:1}0
 rpm -q gpg-pubkey-9d7b9686-4947b567 &>/dev/null || rpm --import $RPM_BUILD_ROOT/etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2 || :
+rpm -q gpg-pubkey-242b3ccc-55816f7b &>/dev/null || rpm --import $RPM_BUILD_ROOT/etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2-testing || :
 %endif
 
 %changelog

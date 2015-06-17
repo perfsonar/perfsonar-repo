@@ -5,5 +5,5 @@ name = Internet2 Nightly RPM Repository
 baseurl = http://software.internet2.edu/branches/nightly/rpms/el5/$basearch/main/
 enabled = 1
 protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2-testing
 gpgcheck = 1
