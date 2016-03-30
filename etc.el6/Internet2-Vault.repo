@@ -37,3 +37,12 @@ enabled = 0
 protect = 0
 gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
 gpgcheck = 1
+
+[Internet2-Vault-pSPT-3.4]
+name = Internet2 pSPT 3.4 Vault RPM Repository - software.internet2.edu - main
+baseurl = http://software.internet2.edu/vault/3.4/rpms/el6/$BASEARCH/main/
+enabled = 0
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2
+gpgcheck = 1
+
