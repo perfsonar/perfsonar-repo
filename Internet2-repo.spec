@@ -75,8 +75,8 @@ Configures yum to use Internet2 staging repository
 
 %post
 %if %{!?_without_rpmpubkey:1}0
-rpm -q gpg-pubkey-9d7b9686-4947b567 &>/dev/null || rpm --import $RPM_BUILD_ROOT/etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2 || :
-rpm -q gpg-pubkey-242b3ccc-55816f7b &>/dev/null || rpm --import $RPM_BUILD_ROOT/etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2-testing || :
+rpm -q gpg-pubkey-9d7b9686-4947b567 &>/dev/null || rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2 || :
+rpm -q gpg-pubkey-242b3ccc-55816f7b &>/dev/null || rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-Internet2-testing || :
 %endif
 
 %changelog
