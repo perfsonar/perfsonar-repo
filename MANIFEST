@@ -22,4 +22,5 @@ etc.el7/Internet2-web100_kernel.repo
 etc.el7/Internet2.repo
 etc.el7/RPM-GPG-KEY-Internet2
 etc.el7/RPM-GPG-KEY-Internet2-testing
+etc.el7.centos
 MANIFEST
