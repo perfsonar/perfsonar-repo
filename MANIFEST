@@ -15,4 +15,11 @@ etc.el6/Internet2-web100_kernel.repo
 etc.el6/Internet2-Vault.repo
 etc.el6/Internet2-staging.repo
 etc.el6/Internet2-nightly.repo
+etc.el7/Internet2-Vault.repo
+etc.el7/Internet2-nightly.repo
+etc.el7/Internet2-staging.repo
+etc.el7/Internet2-web100_kernel.repo
+etc.el7/Internet2.repo
+etc.el7/RPM-GPG-KEY-Internet2
+etc.el7/RPM-GPG-KEY-Internet2-testing
 MANIFEST
