@@ -2,7 +2,7 @@
 
 Summary:    Internet2 Repository file and package configuration
 Name:       Internet2-repo
-Version:    0.7
+Version:    0.8
 Release:    1 
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
