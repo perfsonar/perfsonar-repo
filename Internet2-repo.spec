@@ -33,6 +33,15 @@ Requires:   Internet2-repo
 %description staging
 Configures yum to use Internet2 staging repository
 
+%package extras
+Summary:    Internet2 extras repository
+Group:      System Environment/Base
+Requires:   Internet2-repo
+
+%description extras
+Configures yum to use Internet2 extras repository
+
+
 %prep
 %setup -q -n Internet2-repo
 
@@ -46,6 +55,7 @@ Configures yum to use Internet2 staging repository
 %{__cp} etc%{dist}/Internet2-Vault.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/Internet2-nightly.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/Internet2-staging.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc%{dist}/Internet2-extras.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 %{__cp} etc%{dist}/RPM-GPG-KEY-Internet2 $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 %{__cp} etc%{dist}/RPM-GPG-KEY-Internet2-testing $RPM_BUILD_ROOT/etc/pki/rpm-gpg
@@ -72,6 +82,10 @@ Configures yum to use Internet2 staging repository
 %files staging
 %defattr(-, root, root, 0755)
 %config(noreplace) /etc/yum.repos.d/Internet2-staging.repo
+
+%files extras
+%defattr(-, root, root, 0755)
+%config(noreplace) /etc/yum.repos.d/Internet2-extras.repo
 
 %post
 %if %{!?_without_rpmpubkey:1}0
