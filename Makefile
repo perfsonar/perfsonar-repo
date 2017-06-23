@@ -1,4 +1,4 @@
-PACKAGE=Internet2-repo
+PACKAGE=perfSONAR-repo
 
 dist:
 	mkdir /tmp/$(PACKAGE)

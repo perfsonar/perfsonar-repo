@@ -1,5 +1,5 @@
-# Internet2 Yum Repository RPM
-This repository contains the files needed to build an RPM that configures yum to use the Internet2 yum repository at http://software.internet2.edu/rpms/.
+# perfSONAR Yum Repository RPM
+This repository contains the files needed to build an RPM that configures yum to use the perfSONAR yum repository at http://software.internet2.edu/rpms/.
 
 ## Building the RPM
 
@@ -13,13 +13,13 @@ You may build the RPM by following the steps below (note these instructions assu
 1. Copy the tarball and SPEC file to you RPM build directory:
 
     ```bash
-    cp Internet2-repo.tar.gz ~/rpmbuild/SOURCES
-    cp Internet2-repo.spec ~/rpmbuild/SPECS
+    cp perfSONAR-repo.tar.gz ~/rpmbuild/SOURCES
+    cp perfSONAR-repo.spec ~/rpmbuild/SPECS
     ```
 1. Build the RPM:
 
     ```bash
-    rpm -qa SPEC/Internet2-repo.spec
+    rpmbuild -ba SPEC/perfSONAR-repo.spec
     ```
 
 
