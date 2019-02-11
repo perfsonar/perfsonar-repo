@@ -34,7 +34,7 @@ Configures yum to use perfSONAR nightly repository for the next patch version
 Summary:    perfSONAR nightly (minor version) repository
 Group:      System Environment/Base
 
-%description nightly-patch
+%description nightly-minor
 Configures yum to use perfSONAR nightly repository for the next minor version
 
 %package staging
