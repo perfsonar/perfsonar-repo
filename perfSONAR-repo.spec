@@ -67,9 +67,8 @@ Configures yum to use perfSONAR extras repository
 %{__rm} -rf $RPM_BUILD_ROOT
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/perfSONAR.repo $RPM_BUILD_ROOT/etc/yum.repos.d
-%{__cp} etc%{dist}/perfSONAR-web100_kernel.repo $RPM_BUILD_ROOT/etc/yum.repos.d
-%{__cp} etc%{dist}/perfSONAR-Vault.repo $RPM_BUILD_ROOT/etc/yum.repos.d
-%{__cp} etc%{dist}/perfSONAR-nightly.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc%{dist}/perfSONAR-nightly-patch.repo $RPM_BUILD_ROOT/etc/yum.repos.d
+%{__cp} etc%{dist}/perfSONAR-nightly-minor.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/perfSONAR-staging.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__cp} etc%{dist}/perfSONAR-extras.repo $RPM_BUILD_ROOT/etc/yum.repos.d
 %{__mkdir} -p $RPM_BUILD_ROOT/etc/pki/rpm-gpg
@@ -85,8 +84,6 @@ Configures yum to use perfSONAR extras repository
 %pubkey etc%{dist}/RPM-GPG-KEY-perfSONAR
 %endif
 %config(noreplace) /etc/yum.repos.d/perfSONAR.repo
-%config(noreplace) /etc/yum.repos.d/perfSONAR-web100_kernel.repo
-%config(noreplace) /etc/yum.repos.d/perfSONAR-Vault.repo
 %dir /etc/pki/rpm-gpg/
 /etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR
 /etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
@@ -115,9 +112,10 @@ rpm -q gpg-pubkey-242b3ccc-55816f7b &>/dev/null || rpm --import /etc/pki/rpm-gpg
 
 %changelog
 * Mon Feb 11 2019 Andy Lake <andy@es.net> - 0.0.1-3
-- Remove apt-rpm support
-- Add requirement on yum/rpm
-- Add support for web100 kernel repository
+- Removed el6 support
+- Removed web100 support
+- Removed Vault
+- Added nightly-patch and nightly-minor repos
 
 * Thu Sep 30 2010 Aaron Brown <aaron@internet2.edu> - 0.0.1-3
 - Remove apt-rpm support
