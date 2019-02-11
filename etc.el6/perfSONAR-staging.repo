@@ -1,9 +1,0 @@
-# Name: perfSONAR Staging RPM Repository
-# URL: http://software.internet2.edu
-[perfSONAR-staging]
-name = perfSONAR Staging RPM Repository
-baseurl = https://perfsonar-dev3.grnoc.iu.edu/staging/el/6/$basearch/perfsonar/
-enabled = 1
-protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
-gpgcheck = 1

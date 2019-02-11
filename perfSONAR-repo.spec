@@ -2,7 +2,7 @@
 
 Summary:    perfSONAR Repository file and package configuration
 Name:       perfSONAR-repo
-Version:    0.8
+Version:    0.9
 Release:    1 
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
@@ -19,23 +19,29 @@ Obsoletes:  Internet2-epel6-repo <= 0.1-1
 %description
 perfSONAR software release file. This package contains yum configuration for the perfSONAR RPM Repository, as well as the public GPG keys used to sign them.
 
-%package nightly
-Summary:    perfSONAR nightly repository
+%package nightly-patch
+Summary:    perfSONAR nightly (patch version) repository
 Group:      System Environment/Base
-Requires:   perfSONAR-repo
 Provides:   Internet2-repo-nightly
 Obsoletes:  Internet2-repo-nightly
+Provides:   perfSONAR-repo-nightly
+Obsoletes:  perfSONAR-repo-nightly
 
-%description nightly
-Configures yum to use perfSONAR nightly repository
+%description nightly-patch
+Configures yum to use perfSONAR nightly repository for the next patch version
+
+%package nightly-minor
+Summary:    perfSONAR nightly (minor version) repository
+Group:      System Environment/Base
+
+%description nightly-patch
+Configures yum to use perfSONAR nightly repository for the next minor version
 
 %package staging
 Summary:    perfSONAR staging repository
 Group:      System Environment/Base
-Requires:   perfSONAR-repo
 Provides:   Internet2-repo-staging
 Obsoletes:  Internet2-repo-staging
-
 
 %description staging
 Configures yum to use perfSONAR staging repository
@@ -85,9 +91,13 @@ Configures yum to use perfSONAR extras repository
 /etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR
 /etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
 
-%files nightly
+%files nightly-patch
 %defattr(-, root, root, 0755)
-%config(noreplace) /etc/yum.repos.d/perfSONAR-nightly.repo
+%config(noreplace) /etc/yum.repos.d/perfSONAR-nightly-patch.repo
+
+%files nightly-minor
+%defattr(-, root, root, 0755)
+%config(noreplace) /etc/yum.repos.d/perfSONAR-nightly-minor.repo
 
 %files staging
 %defattr(-, root, root, 0755)
@@ -104,6 +114,11 @@ rpm -q gpg-pubkey-242b3ccc-55816f7b &>/dev/null || rpm --import /etc/pki/rpm-gpg
 %endif
 
 %changelog
+* Mon Feb 11 2019 Andy Lake <andy@es.net> - 0.0.1-3
+- Remove apt-rpm support
+- Add requirement on yum/rpm
+- Add support for web100 kernel repository
+
 * Thu Sep 30 2010 Aaron Brown <aaron@internet2.edu> - 0.0.1-3
 - Remove apt-rpm support
 - Add requirement on yum/rpm

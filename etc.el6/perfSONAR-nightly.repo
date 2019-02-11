@@ -1,9 +1,0 @@
-# Name: perfSONAR Nightly RPM Repository
-# URL: http://software.internet2.edu
-[perfSONAR-nightly]
-name = perfSONAR Nightly RPM Repository
-baseurl = https://perfsonar-dev3.grnoc.iu.edu/nightly/el/6/$basearch/perfsonar/
-enabled = 1
-protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
-gpgcheck = 1

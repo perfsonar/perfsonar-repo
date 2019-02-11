@@ -1,9 +1,0 @@
-# Name: perfSONAR RPM Repository
-# URL: http://software.internet2.edu
-[perfSONAR-web100_kernel]
-name = perfSONAR Web100 Kernel RPM Repository - software.internet2.edu - main
-mirrorlist = http://software.internet2.edu/web100_kernel/rpms/el6/mirrors-Internet2-web100_kernel
-enabled = 0
-protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR
-gpgcheck = 1
