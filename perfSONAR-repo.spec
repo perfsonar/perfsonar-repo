@@ -19,9 +19,17 @@ Obsoletes:  Internet2-epel6-repo <= 0.1-1
 %description
 perfSONAR software release file. This package contains yum configuration for the perfSONAR RPM Repository, as well as the public GPG keys used to sign them.
 
+%package key-testing
+Summary:    perfSONAR RPM Key for Testing Repos
+Group:      System Environment/Base
+
+%description key-testing
+perfSONAR RPM Key for Testing Repos
+
 %package nightly-patch
 Summary:    perfSONAR nightly (patch version) repository
 Group:      System Environment/Base
+Requires:   perfSONAR-repo-key-testing
 Provides:   Internet2-repo-nightly
 Obsoletes:  Internet2-repo-nightly
 Provides:   perfSONAR-repo-nightly
@@ -33,6 +41,7 @@ Configures yum to use perfSONAR nightly repository for the next patch version
 %package nightly-minor
 Summary:    perfSONAR nightly (minor version) repository
 Group:      System Environment/Base
+Requires:   perfSONAR-repo-key-testing
 
 %description nightly-minor
 Configures yum to use perfSONAR nightly repository for the next minor version
@@ -40,6 +49,7 @@ Configures yum to use perfSONAR nightly repository for the next minor version
 %package staging
 Summary:    perfSONAR staging repository
 Group:      System Environment/Base
+Requires:   perfSONAR-repo-key-testing
 Provides:   Internet2-repo-staging
 Obsoletes:  Internet2-repo-staging
 
@@ -80,12 +90,11 @@ Configures yum to use perfSONAR extras repository
 
 %files
 %defattr(-, root, root, 0755)
-%if %{!?_without_rpmpubkey:1}0
-%pubkey etc%{dist}/RPM-GPG-KEY-perfSONAR
-%endif
 %config(noreplace) /etc/yum.repos.d/perfSONAR.repo
-%dir /etc/pki/rpm-gpg/
 /etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR
+
+%files key-testing
+%defattr(-, root, root, 0755)
 /etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
 
 %files nightly-patch
