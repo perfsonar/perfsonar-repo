@@ -1,6 +1,6 @@
 # Name: perfSONAR Nightly (Minor Version) RPM Repository
 # URL: https://perfsonar-dev3.grnoc.iu.edu/nightly/
-[perfSONAR-nightly]
+[perfSONAR-nightly-minor]
 name = perfSONAR Nightly RPM Repository
 baseurl = https://perfsonar-dev3.grnoc.iu.edu/nightly/el/7/$basearch/perfsonar/minor
 enabled = 1
