@@ -5,5 +5,5 @@ name = perfSONAR Nightly RPM Repository
 baseurl = https://perfsonar-dev3.grnoc.iu.edu/nightly/el/7/$basearch/perfsonar/patch
 enabled = 1
 protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-nightly-patch
 gpgcheck = 1

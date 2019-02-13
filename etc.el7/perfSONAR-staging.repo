@@ -5,5 +5,5 @@ name = perfSONAR Staging RPM Repository
 baseurl = https://perfsonar-dev3.grnoc.iu.edu/staging/el/7/$basearch/perfsonar/latest
 enabled = 1
 protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-testing
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-staging
 gpgcheck = 1
