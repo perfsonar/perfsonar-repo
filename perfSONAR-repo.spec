@@ -2,7 +2,7 @@
 
 Summary:    perfSONAR Repository file and package configuration
 Name:       perfSONAR-repo
-Version:    0.9
+Version:    0.10
 Release:    1
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
