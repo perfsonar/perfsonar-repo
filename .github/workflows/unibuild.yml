@@ -26,3 +26,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: make
+      
+      # Upload RPMs as artifacts
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ github.ref_name }}-alma8
+          path: unibuild-repo/
