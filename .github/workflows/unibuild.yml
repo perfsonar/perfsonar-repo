@@ -35,12 +35,9 @@ jobs:
         run: | 
           unibuild make
           mkdir unbuild-repo
-          echo "############START DEBUG############"
-          pwd
-          ls
-          cat unibuild-order | unibuild gather unbuild-repo
-          echo "############END DEBUG#############"
-          
+          unibuild gather unbuild-repo
+          tree unbuild-repo
+
       
       # Upload RPMs as artifacts
       - uses: actions/upload-artifact@v3
