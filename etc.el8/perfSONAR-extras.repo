@@ -1,0 +1,9 @@
+# Name: perfSONAR Extras RPM Repository
+# URL: http://software.internet2.edu
+[perfSONAR-extras]
+name = perfSONAR Extras RPM Repository
+baseurl = http://software.internet2.edu/branches/extras/rpms/el8/$basearch/main/
+enabled = 1
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR
+gpgcheck = 1
