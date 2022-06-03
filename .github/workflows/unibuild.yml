@@ -38,10 +38,9 @@ jobs:
           echo "############START DEBUG############"
           pwd
           ls
-          cat unibuild-order
-          unibuild order
+          cat unibuild-order | unibuild gather unbuild-repo
           echo "############END DEBUG#############"
-          unibuild gather unbuild-repo
+          
       
       # Upload RPMs as artifacts
       - uses: actions/upload-artifact@v3
