@@ -31,10 +31,11 @@ jobs:
         run: mkdir ${{ env.TMPDIR }}
         
       # Runs a single command using the runners shell
-      - name: Run make
+      - name: Build and gather packages
         run: | 
           unibuild make
           mkdir unbuild-repo
+          unibuild order
           unibuild gather unbuild-repo
       
       # Upload RPMs as artifacts
