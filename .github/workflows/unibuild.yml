@@ -32,7 +32,9 @@ jobs:
         
       # Runs a single command using the runners shell
       - name: Run make
-        run: make
+        run: | 
+          unibuild make
+          unibuild gather
       
       # Upload RPMs as artifacts
       - uses: actions/upload-artifact@v3
