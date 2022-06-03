@@ -1,2 +1,11 @@
 #Ignore mac hidden file
 .DS_Store
+#Ignore vscode
+.vscode/
+# Ignore quilt cache directory
+.pc/
+.vagrant/
+# Ignore unibuild files 
+unibuild-log
+unibuild-work/
+unibuild-repo/

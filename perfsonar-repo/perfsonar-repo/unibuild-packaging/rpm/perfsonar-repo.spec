@@ -1,20 +1,22 @@
 # $Id$
 
 Summary:    perfSONAR Repository file and package configuration
-Name:       perfSONAR-repo
-Version:    0.10
+Name:       perfsonar-repo
+Version:    0.11
 Release:    1
 License:    distributable, see http://www.internet2.edu/membership/ip.html
 Group:      System Environment/Base
 URL:        http://software.internet2.edu
-Source0:    perfSONAR-repo.tar.gz
+Source0:    %{name}-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  noarch
 Requires:   yum
 Requires:   rpm
+Provides:   perfSONAR-repo
 Provides:   Internet2-repo
 Obsoletes:  Internet2-repo
 Obsoletes:  Internet2-epel6-repo <= 0.1-1
+Obsoletes:  perfSONAR-repo
 
 %description
 perfSONAR software release file. This package contains yum configuration for the perfSONAR RPM Repository, as well as the public GPG keys used to sign them.
@@ -26,6 +28,8 @@ Provides:   Internet2-repo-nightly
 Obsoletes:  Internet2-repo-nightly
 Provides:   perfSONAR-repo-nightly
 Obsoletes:  perfSONAR-repo-nightly
+Provides:   perfSONAR-repo-nightly-patch
+Obsoletes:  perfSONAR-repo-nightly-patch
 
 %description nightly-patch
 Configures yum to use perfSONAR nightly repository for the next patch version
@@ -42,6 +46,8 @@ Summary:    perfSONAR staging repository
 Group:      System Environment/Base
 Provides:   Internet2-repo-staging
 Obsoletes:  Internet2-repo-staging
+Provides:   perfSONAR-repo-staging
+Obsoletes:  perfSONAR-repo-staging
 
 %description staging
 Configures yum to use perfSONAR staging repository
@@ -49,17 +55,18 @@ Configures yum to use perfSONAR staging repository
 %package extras
 Summary:    perfSONAR extras repository
 Group:      System Environment/Base
-Requires:   perfSONAR-repo
+Requires:   perfsonar-repo
 Provides:   Internet2-repo-extras
 Obsoletes:  Internet2-repo-extras
-
+Provides:   perfSONAR-repo-extras
+Obsoletes:  perfSONAR-repo-extras
 
 %description extras
 Configures yum to use perfSONAR extras repository
 
 
 %prep
-%setup -q -n perfSONAR-repo
+%setup -q -n %{name}-%{version}
 
 %build
 
