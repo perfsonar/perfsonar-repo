@@ -34,7 +34,8 @@ jobs:
       - name: Run make
         run: | 
           unibuild make
-          unibuild gather
+          mkdir unbuild-repo
+          unibuild gather unbuild-repo
       
       # Upload RPMs as artifacts
       - uses: actions/upload-artifact@v3
