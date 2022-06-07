@@ -9,7 +9,5 @@ changecom()dnl
 # more information.
 #
 
-
-# This has packaging for RPM and Debian and is built on both.
 # Only one package, so build current directory
 perfsonar-repo
