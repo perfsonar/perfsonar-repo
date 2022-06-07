@@ -5,7 +5,7 @@ name: Build Packages with Unibuild
 # Controls when the workflow will run
 on:
   push:
-    branches: [ unibuild ]
+    branches: [ '*' ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
