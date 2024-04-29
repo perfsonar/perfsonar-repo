@@ -1,9 +1,0 @@
-# Name: perfSONAR Nightly (Patch Version) RPM Repository
-# URL: https://ps-jenkins.grnoc.iu.edu/nightly/
-[perfSONAR-nightly-patch]
-name = perfSONAR Nightly RPM Repository
-baseurl = https://ps-jenkins.grnoc.iu.edu/nightly/ol/8/$basearch/perfsonar/patch
-enabled = 1
-protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-nightly-patch
-gpgcheck = 1

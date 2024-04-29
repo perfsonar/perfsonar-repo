@@ -1,9 +1,0 @@
-# Name: perfSONAR Staging RPM Repository
-# URL: https://ps-jenkins.grnoc.iu.edu/staging/
-[perfSONAR-staging]
-name = perfSONAR Staging RPM Repository
-baseurl = https://ps-jenkins.grnoc.iu.edu/staging/ol/8/$basearch/perfsonar/latest
-enabled = 1
-protect = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-staging
-gpgcheck = 1
