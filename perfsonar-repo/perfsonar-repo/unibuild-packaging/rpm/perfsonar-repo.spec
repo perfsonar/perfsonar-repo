@@ -10,7 +10,7 @@ URL:        http://software.internet2.edu
 Source0:    %{name}-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  noarch
-Requires:   yum
+Requires:   dnf
 Requires:   rpm
 Provides:   perfSONAR-repo
 Provides:   Internet2-repo
