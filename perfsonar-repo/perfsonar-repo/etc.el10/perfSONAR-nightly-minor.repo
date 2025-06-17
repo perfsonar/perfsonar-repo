@@ -1,0 +1,9 @@
+# Name: perfSONAR Nightly (Minor Version) RPM Repository
+# URL: https://ps-jenkins.grnoc.iu.edu.edu/nightly/
+[perfSONAR-nightly-minor]
+name = perfSONAR Nightly RPM Repository
+baseurl = https://ps-jenkins.grnoc.iu.edu/nightly/el/9/$basearch/perfsonar/minor
+enabled = 1
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR-nightly-minor
+gpgcheck = 1

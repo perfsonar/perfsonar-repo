@@ -1,0 +1,9 @@
+# Name: perfSONAR RPM Repository
+# URL: http://software.internet2.edu
+[perfSONAR]
+name = perfSONAR RPM Repository - software.internet2.edu - main
+mirrorlist = http://software.internet2.edu/rpms/el10/mirrors-Toolkit-Internet2
+enabled = 1
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-perfSONAR
+gpgcheck = 1
