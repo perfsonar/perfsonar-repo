@@ -19,7 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: ghcr.io/perfsonar/unibuild/alma8:latest
+    container: ghcr.io/perfsonar/unibuild/alma9:latest
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -42,5 +42,5 @@ jobs:
       # Upload RPMs as artifacts
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.ref_name }}-alma8
+          name: ${{ github.ref_name }}-alma9
           path: unbuild-repo
